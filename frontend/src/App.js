@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter,Routes,Route} from'react-router-dom'
-//Pages an components 
-import Home from'./pages/Home' 
-import Navbar  from './components/Number'
+import React,{useState, useEffect} from "react";
+import grapesjs from "grapesjs";
+import gjsPersetWepage from"grapesjs-preset-webpage";
 function App() {
+  const [editor,setEditor] = useState(null);
+  useEffect(() =>{
+    const editor = grapesjs.init({
+      container:"#editor",
+      plugins:[gjsPersetWepage],
+      pluginsOpts:{
+        gjsPersetWepage:{},
+      }
+    });
+    setEditor(editor);
+  },[]);
+
   return (
     <div className="App">
-     <BrowserRouter>   
-     <Navbar/>
-     <div className="pages">
-    <Routes>
-      <Route
-        path="/"
-        element={<Home/>}
-      />
-    </Routes>
-     </div>
-     </BrowserRouter>
+      <div id="editor"></div>
     </div>
   );
 }
