@@ -21,7 +21,11 @@ const formSchema =new Schema({
         type:String,
         required:true
     }, 
-    fields:[formField],
+    fields:[formField], 
+    publish:{
+        type:Boolean,
+        default:false,
+    }
 });
 
 

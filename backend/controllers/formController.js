@@ -65,6 +65,30 @@ const updateoneForm=async(req,res)=>{
     } 
     res.status(200).json(form)
 }
+const publishForm = async (req, res) => { 
+
+    const { id } = req.params; 
+    //verifie si l'id est valide  
+    
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error:'No such form'})  
+    }   
+    try {
+        // Vérifiez si le formulaire existe
+        const form = await Form.findById(id);
+        if (!form) {
+            return res.status(404).json({ error: 'No such form' });
+        }
+
+        // Mettez à jour le champ "publish"
+        form.publish = true;
+       await form.save()
+        
+        res.status(200).json({ message: 'Form published successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
 
 
 module.exports={
@@ -72,5 +96,6 @@ module.exports={
     getAllForms,
     getoneforms,
     deleteoneForm, 
-    updateoneForm
+    updateoneForm,
+    publishForm
 }
