@@ -1,32 +1,18 @@
 //endpoints or routes 
 const express=require('express') 
 const router =express.Router() 
-const form=require('../models/formModel')
+const Form=require('../models/formModel')
+const {createoneForm,getAllForms,getoneforms,deleteoneForm, updateoneForm}=require('../controllers/formController')
 //get all the form
-router.get('/',(req,res)=>{ 
-    res.json({mssg:'Get all forms'})
-})  
+router.get('/',getAllForms)  
 //get one form 
-router.get('/:id',(req,res)=>{
-    res.json({mssg:'Get one form'})
-}) 
+router.get('/:id',getoneforms) 
 //create
-router.post('/',(req,res)=>{ 
-    const {title,fields}=req.body 
-    try {
-        const form=form.create()
-    } catch(error){
-        res.status(400).json({error:error.message})
-    }
-    res.json({mssg:'create new form'})
-}) 
+router.post('/',createoneForm) 
 //delete
-router.delete('/:id',(req,res)=>{
-    res.json({mssg:'delete form'})
-})  
+router.delete('/:id',deleteoneForm)  
+
 //update 
-router.patch('/:id',(req,res)=>{
-    res.json({mssg:'update one form'})
-}) 
+router.patch('/:id',updateoneForm) 
 
 module.exports=router 
