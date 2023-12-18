@@ -1,7 +1,8 @@
 require('dotenv').config()
 const express=require('express') ;
 const bodyParser = require('body-parser'); 
-const formsRoutes=require('./routes/forms') 
+const formsRoutes=require('./routes/forms') ;
+const responsesRoutes=require('./routes/Responses') 
 const mongoose=require('mongoose')
 //express app
 const app=express()
@@ -13,12 +14,13 @@ app.use((req,res,next)=>{
 }) 
 //routes
 app.use('/api/forms',formsRoutes) 
+app.use('/api/Responses',responsesRoutes) 
 //connect with the mongo db 
 mongoose.connect(process.env.MONGO_UI)
-//what we do after connect to the databes  we listen to the requests 
+//what we do after connect to the database  we listen to the requests 
     .then(()=>{
         app.listen(process.env.PORT,()=>{
-            console.log('connecte to  mongodb and listennig on port',process.env.PORT)
+            console.log('connecte to  db and listennig on port',process.env.PORT)
         }) 
     })  
     //what we do if the connect to the database failed 

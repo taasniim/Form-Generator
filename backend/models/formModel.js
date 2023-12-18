@@ -29,5 +29,10 @@ const formSchema =new Schema({
 });
 
 
-module.exports=mongoose.model('form',formSchema)
+const Form=mongoose.model('form',formSchema); 
+const FormFields=mongoose.model('formfields',formField); 
+module.exports={
+    Form,
+    FormFields
+}
 
