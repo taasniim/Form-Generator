@@ -1,22 +1,32 @@
-import React,{useState, useEffect} from "react";
-import grapesjs from "grapesjs";
-import gjsPersetWepage from"grapesjs-preset-webpage";
-function App() {
-  const [editor,setEditor] = useState(null);
-  useEffect(() =>{
-    const editor = grapesjs.init({
-      container:"#editor",
-      plugins:[gjsPersetWepage],
-      pluginsOpts:{
-        gjsPersetWepage:{},
-      }
-    });
-    setEditor(editor);
-  },[]);
+// App.js
+import React from 'react';
+import Header from './components/Header';
+import Template from './components/Template';
+import Mainbody from './components/Mainbody';
+import { BrowserRouter as Router, Route, Link,Routes } from 'react-router-dom';
+import Formheader from './components/Formheader'
+import Centeredtabs from './components/Tabs';
+import Question_form from './components/Question_form';
 
+function App() {
   return (
-    <div className="App">
-      <div id="editor"></div>
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/form' element={<>
+          <Formheader/>
+        <Centeredtabs/>
+        <Question_form/>
+        </>}/>
+          
+          <Route path='/' element={<>
+            <Header />
+            <Template />
+            <Mainbody />
+            
+          </>} />
+          </Routes>
+      </Router>
     </div>
   );
 }
