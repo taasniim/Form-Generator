@@ -1,0 +1,111 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: "Quicksand", sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 100px;
+  border-bottom: 2px solid #f2f2f2; 
+  margin-bottom: 40px; 
+  margin-right: 40px;
+  margin-left: 40px;
+  background-color: antiquewhite;
+}
+
+.navbar h1 {
+  color: #43b567;
+  margin-right: auto;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #43b567;
+}
+
+/* Content Styles */
+.Home {
+  max-width: 100%;
+  margin: 20px ;
+  padding: 20px;
+  
+ 
+}
+.Home h2 {
+ text-align:center; 
+ margin-bottom: 40px;
+ 
+}
+.Home forms{
+ max-width: 800px; 
+  
+ }
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.FormDetails {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.FormDetails h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.FormDetails h5 {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.FormDetails ul {
+  list-style: none;
+}
+
+.FormDetails li {
+  margin-bottom: 5px;
+}
+
+.FormDetails p {
+  color: #777;
+  margin-top: 10px;
+}
+
+.delete-button {
+  background-color:#43b567;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer; 
+  
+}
+
+.delete-button:hover {
+  background-color:#43b567;
+}

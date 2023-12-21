@@ -1,13 +1,16 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
+  "name": "client",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "grapesjs": "^0.21.7",
-    "grapesjs-preset-webpage": "^1.0.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
     "react": "^18.2.0",
+    "react-dnd": "^14.0.0",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -36,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "node": "^21.2.0"
+    "react-router-dom": "^6.21.0"
   }
 }

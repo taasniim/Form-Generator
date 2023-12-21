@@ -22,12 +22,19 @@ const getAllResponses =async(req,res)=>{
     const {formId}=req.params;
     const responses=await ResponseModel.find({form: formId});
     res.status(200).json(responses)
+} 
+
+//number of response 
+const countResponses =async(req,res)=>{ 
+    const {formId}=req.params;
+    const responses=await ResponseModel.countDocuments({form: formId});
+    res.status(200).json({responses})
 }
 
 
 module.exports={
     SaveResponse, 
     getAllResponses, 
-  
+  countResponses
     
 }
