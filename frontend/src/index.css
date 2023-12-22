@@ -111,6 +111,13 @@ body {
   background-color:#43b567;
 }
 
-.CreateForm FormGenerator {
-  margin: 40px;
+.CreateForm {
+  margin: 40px;  
+  color: #43b567;
+} 
+.CreateForm h1 {
+  text-align: center; 
+  margin-bottom: 20px;
+  color: #43b567;
 }
+

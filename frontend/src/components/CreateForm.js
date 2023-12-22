@@ -27,7 +27,7 @@ const CreateForm = () => {
 
     return (
         <div className='CreateForm'>
-            <Navbar />
+            <Navbar /> 
             <div id="formeGenerator" ref={formBuilderRef}></div>
         </div>
     );
