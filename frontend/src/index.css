@@ -31,12 +31,13 @@ body {
 }
 
 .navbar a {
-  margin-left: 20px;
+  margin-left: 10px;
   text-decoration: none;
   padding: 10px;
   font-size: 1.2em;
   color: #333;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; 
+  
 }
 
 .navbar a:hover {
@@ -108,4 +109,8 @@ body {
 
 .delete-button:hover {
   background-color:#43b567;
+}
+
+.CreateForm FormGenerator {
+  margin: 40px;
 }

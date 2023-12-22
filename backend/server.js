@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_UI)
 //what we do after connect to the databes  we listen to the requests 
     .then(()=>{
         app.listen(process.env.PORT,()=>{
-            console.log('connecte to  mongoand listennig on port',process.env.PORT)
+            console.log('connecte to  mongoa listennig on port',process.env.PORT)
         }) 
     })  
     //what we do if the connect to the database failed 
