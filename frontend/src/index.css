@@ -27,7 +27,8 @@ body {
 
 .navbar h1 {
   color: #43b567;
-  margin-right: auto;
+  margin-right: auto; 
+ font-size: 30px;
 }
 
 .navbar a {

@@ -19,7 +19,7 @@ app.use('/api/forms',formsRoutes)
 app.use('/api/Responses',ResponsesRoutes) 
 //connect with the mongo db 
 mongoose.connect(process.env.MONGO_UI)
-//what we do after connect to the databes  we listen to the requests 
+//what we do after connect to the databes ? we listen to the requests 
     .then(()=>{
         app.listen(process.env.PORT,()=>{
             console.log('connecte to  mongodb listennig on port',process.env.PORT)
