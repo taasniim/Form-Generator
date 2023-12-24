@@ -23,21 +23,22 @@ const getoneforms=async(req,res)=>{
 
 
 //create one form 
+const createoneForm = async (req, res) => {
+    const { title, fields } = req.body;
 
-const createoneForm=async(req,res)=>{
-    const {title,fields}=req.body  
     if (!title || !fields || fields.length === 0) {
         return res.status(400).json({ error: 'Title and at least one field are required.' });
-    } 
-    //add form to db 
-    try {
-        const form=await Form.create({title,fields})
-        res.status(200).json(form)
-    } catch(error){
-        res.status(400).json({error:error.message})
     }
-    res.json({mssg:'create  new form'})
-}
+
+    try {
+        const form = await Form.create({ title, fields });
+        res.status(200).json(form); 
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+   
+};
+
 
 //delete one form
 const deleteoneForm=async(req,res)=>{

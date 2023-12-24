@@ -10,7 +10,7 @@ const formField=new Schema({
     type:{
         type : String,
         required :true,
-        enum:['text', 'textarea', 'select','number','email','date','file','tel'],
+        enum:['text', 'textarea', 'select','number','email','date','file','tel','input','checkbox','RadioButton'],
     },
     options:['String'],
 });

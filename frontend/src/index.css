@@ -1,25 +1,25 @@
-/* Reset CSS */
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
+
 body {
   font-family: "Quicksand", sans-serif;
   color: #333;
   background-color: #f8f8f8;
 }
 
-/* Navbar Styles */
+
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
   max-width: 100%;
   height: 100px;
-  border-bottom: 2px solid #f2f2f2; 
-  margin-bottom: 40px; 
+  border-bottom: 2px solid #f2f2f2;
+  margin-bottom: 40px;
   margin-right: 40px;
   margin-left: 40px;
   background-color: antiquewhite;
@@ -36,8 +36,7 @@ body {
   padding: 10px;
   font-size: 1.2em;
   color: #333;
-  transition: color 0.3s ease; 
-  
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -47,27 +46,26 @@ body {
 /* Content Styles */
 .Home {
   max-width: 100%;
-  margin: 20px ;
+  margin: 20px;
   padding: 20px;
-  
- 
 }
+
 .Home h2 {
- text-align:center; 
- margin-bottom: 40px;
- 
+  text-align: center;
+  margin-bottom: 40px;
 }
-.Home forms{
- max-width: 800px; 
-  
- }
+
+.Home forms {
+  max-width: 800px;
+}
+
 .forms {
   display: flex;
   flex-wrap: wrap;
 }
 
 .FormDetails {
-  background-color: #fff;
+  background-color: antiquewhite;
   border: 1px solid #ddd;
   padding: 15px;
   margin: 10px;
@@ -99,25 +97,59 @@ body {
 }
 
 .delete-button {
-  background-color:#43b567;
+  background-color: #43b567;
   color: #fff;
   border: none;
   padding: 5px 10px;
-  cursor: pointer; 
-  
+  cursor: pointer;
 }
 
 .delete-button:hover {
-  background-color:#43b567;
+  background-color: #43b567;
 }
 
+
 .CreateForm {
-  margin: 40px;  
-  color: #43b567;
-} 
-.CreateForm h1 {
-  text-align: center; 
-  margin-bottom: 20px;
-  color: #43b567;
+  text-align: center;
+  margin: 40px;
+  color: #333; 
 }
+
+.form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #dee2e6; 
+  border-radius: 5px;
+}
+
+.menuItem {
+  background-color: #007bff; 
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.Field {
+  background-color: #ffffff; 
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da; 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Field h6 {
+  margin-left: 8px;
+}
+
+.preview {
+  background-color: #f8f9fa; 
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 

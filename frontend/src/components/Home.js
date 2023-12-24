@@ -21,7 +21,6 @@ const Home = () => {
     fetchForms();
   }, []); 
   const deletecreatedforms=async(formId)=>{ 
-        //envoyer un requete http delete a l'a
         await axios.delete(`http://localhost:4000/api/forms/${formId}`);  
         const updateFormHome=forms.filter(form=>form._id!==formId);
         setForms(updateFormHome);};
